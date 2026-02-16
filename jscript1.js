@@ -11,6 +11,7 @@ function upDate(previewPic) {
 function unDo() {
     console.log("Mouse inactive");
     var image = document.getElementById('image');
-    image.style.backgroundImage = "url('" + previewPic.src +"')";
+    image.style.backgroundImage = "url('')";
     image.innerHTML = "Di chuột vào ảnh để xem!";
 }
+
