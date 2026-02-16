@@ -1,17 +1,19 @@
 function upDate(previewPic) {
-    console.log("Mouse active");
-    console.log("Alt text: " + previewPic.alt);
-    console.log("Image source: " + previewPic.src);
 
-    var image = document.getElementById('image');
-    image.style.backgroundImage = "url('" + previewPic.src + "')";
-    image.innerHTML = previewPic.alt;
+console.log("Event triggered");
+console.log("Alt:", previewPic.alt);
+console.log("Src:", previewPic.src);
+
+let imageDiv = document.getElementById("image");
+
+imageDiv.innerHTML = previewPic.alt;
+imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
 }
 
-function unDo() {
-    console.log("Mouse inactive");
-    var image = document.getElementById('image');
-    image.style.backgroundImage = "url('')";
-    image.innerHTML = "Di chuột vào ảnh để xem!";
-}
+function undo() {
 
+let imageDiv = document.getElementById("image");
+
+imageDiv.innerHTML = "Hover over or focus on an image below to display here.";
+imageDiv.style.backgroundImage = "url('')";
+}
